@@ -14,7 +14,6 @@ st.set_page_config(
 df = pd.read_csv("https://raw.githubusercontent.com/vqrca/dashboard_salarios_dados/refs/heads/main/dados-imersao-final.csv")
 
 # --- Barra Lateral (Filtros) ---
-# --- Barra Lateral (Filtros) ---
 st.sidebar.header("🔍 Filtros")
 
 # Filtro de Ano
@@ -82,9 +81,8 @@ with col_graf1:
             labels={'usd': 'Média salarial anual (USD)', 'cargo': ' '},
             color='usd',
             color_continuous_scale='greens',
-            text=None  # Remove text labels from bars
         )
-        grafico_cargos.update_traces(text=None)
+        grafico_cargos.update_xaxes(showticklabels=False)
         grafico_cargos.update_layout(title_x=0.1, yaxis={'categoryorder':'total ascending'})
         st.plotly_chart(grafico_cargos, use_container_width=True)
     else:
