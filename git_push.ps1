@@ -1,5 +1,5 @@
 param (
-    [string]$Message = "Auto commit"
+    [string]$Message = " - New updates"
 )
 
 git add .
